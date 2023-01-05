@@ -84,4 +84,24 @@ public class ArrayAlgorithms {
     }
 
 
+    /** Returns the value in numList that represents the maximum value in numList.
+     *  Does NOT mutate (modify) numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  array of integers to find maximum
+     *  @return  the maximum value in the array
+     */
+    public static int maximum(int[] numList)
+    {
+        int bigNum = 0;
+        for (int i = 0; i < numList.length - 1; i++) {
+            if (numList[i] > numList[i+1]) {
+                bigNum = numList[i];
+            }
+        }
+        return bigNum;
+    }
+
+
+
 }
